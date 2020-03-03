@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.32.1">
+
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="github.com/athena-framework/athena">
+  <title>Athena::Routing::Exceptions::TooManyRequests - github.com/athena-framework/athena</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/ACF" data-name="acf">
+      <a href="../../../ACF.html">ACF</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/ADI" data-name="adi">
+      <a href="../../../ADI.html">ADI</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/AED" data-name="aed">
+      <a href="../../../AED.html">AED</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/ART" data-name="art">
+      <a href="../../../ART.html">ART</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/athena-framework/athena/Athena" data-name="athena">
+      <a href="../../../Athena.html">Athena</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/Config" data-name="athena::config">
+      <a href="../../../Athena/Config.html">Config</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Config/Base" data-name="athena::config::base">
+      <a href="../../../Athena/Config/Base.html">Base</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Config/Configuration" data-name="athena::config::configuration">
+      <a href="../../../Athena/Config/Configuration.html">Configuration</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Config/ConfigurationResolver" data-name="athena::config::configurationresolver">
+      <a href="../../../Athena/Config/ConfigurationResolver.html">ConfigurationResolver</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Config/ConfigurationResolverInterface" data-name="athena::config::configurationresolverinterface">
+      <a href="../../../Athena/Config/ConfigurationResolverInterface.html">ConfigurationResolverInterface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/DependencyInjection" data-name="athena::dependencyinjection">
+      <a href="../../../Athena/DependencyInjection.html">DependencyInjection</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/DependencyInjection/Injectable" data-name="athena::dependencyinjection::injectable">
+      <a href="../../../Athena/DependencyInjection/Injectable.html">Injectable</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/DependencyInjection/Register" data-name="athena::dependencyinjection::register">
+      <a href="../../../Athena/DependencyInjection/Register.html">Register</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/DependencyInjection/Service" data-name="athena::dependencyinjection::service">
+      <a href="../../../Athena/DependencyInjection/Service.html">Service</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/DependencyInjection/ServiceContainer" data-name="athena::dependencyinjection::servicecontainer">
+      <a href="../../../Athena/DependencyInjection/ServiceContainer.html">ServiceContainer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/EventDispatcher" data-name="athena::eventdispatcher">
+      <a href="../../../Athena/EventDispatcher.html">EventDispatcher</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/Event" data-name="athena::eventdispatcher::event">
+      <a href="../../../Athena/EventDispatcher/Event.html">Event</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/EventDispatcher" data-name="athena::eventdispatcher::eventdispatcher">
+      <a href="../../../Athena/EventDispatcher/EventDispatcher.html">EventDispatcher</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/EventDispatcherInterface" data-name="athena::eventdispatcher::eventdispatcherinterface">
+      <a href="../../../Athena/EventDispatcher/EventDispatcherInterface.html">EventDispatcherInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/EventListener" data-name="athena::eventdispatcher::eventlistener">
+      <a href="../../../Athena/EventDispatcher/EventListener.html">EventListener</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/EventListenerInterface" data-name="athena::eventdispatcher::eventlistenerinterface">
+      <a href="../../../Athena/EventDispatcher/EventListenerInterface.html">EventListenerInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/EventListenerType" data-name="athena::eventdispatcher::eventlistenertype">
+      <a href="../../../Athena/EventDispatcher/EventListenerType.html">EventListenerType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/StoppableEvent" data-name="athena::eventdispatcher::stoppableevent">
+      <a href="../../../Athena/EventDispatcher/StoppableEvent.html">StoppableEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/EventDispatcher/SubscribedEvents" data-name="athena::eventdispatcher::subscribedevents">
+      <a href="../../../Athena/EventDispatcher/SubscribedEvents.html">SubscribedEvents</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/athena-framework/athena/Athena/Routing" data-name="athena::routing">
+      <a href="../../../Athena/Routing.html">Routing</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Action" data-name="athena::routing::action">
+      <a href="../../../Athena/Routing/Action.html">Action</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/Routing/Config" data-name="athena::routing::config">
+      <a href="../../../Athena/Routing/Config.html">Config</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Config/CORS" data-name="athena::routing::config::cors">
+      <a href="../../../Athena/Routing/Config/CORS.html">CORS</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Controller" data-name="athena::routing::controller">
+      <a href="../../../Athena/Routing/Controller.html">Controller</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Delete" data-name="athena::routing::delete">
+      <a href="../../../Athena/Routing/Delete.html">Delete</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/ErrorRenderer" data-name="athena::routing::errorrenderer">
+      <a href="../../../Athena/Routing/ErrorRenderer.html">ErrorRenderer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/ErrorRendererInterface" data-name="athena::routing::errorrendererinterface">
+      <a href="../../../Athena/Routing/ErrorRendererInterface.html">ErrorRendererInterface</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/Routing/Events" data-name="athena::routing::events">
+      <a href="../../../Athena/Routing/Events.html">Events</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/Exception" data-name="athena::routing::events::exception">
+      <a href="../../../Athena/Routing/Events/Exception.html">Exception</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/Request" data-name="athena::routing::events::request">
+      <a href="../../../Athena/Routing/Events/Request.html">Request</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/RequestAware" data-name="athena::routing::events::requestaware">
+      <a href="../../../Athena/Routing/Events/RequestAware.html">RequestAware</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/Response" data-name="athena::routing::events::response">
+      <a href="../../../Athena/Routing/Events/Response.html">Response</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/SettableResponse" data-name="athena::routing::events::settableresponse">
+      <a href="../../../Athena/Routing/Events/SettableResponse.html">SettableResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/Terminate" data-name="athena::routing::events::terminate">
+      <a href="../../../Athena/Routing/Events/Terminate.html">Terminate</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Events/View" data-name="athena::routing::events::view">
+      <a href="../../../Athena/Routing/Events/View.html">View</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions" data-name="athena::routing::exceptions">
+      <a href="../../../Athena/Routing/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/BadGateway" data-name="athena::routing::exceptions::badgateway">
+      <a href="../../../Athena/Routing/Exceptions/BadGateway.html">BadGateway</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/BadRequest" data-name="athena::routing::exceptions::badrequest">
+      <a href="../../../Athena/Routing/Exceptions/BadRequest.html">BadRequest</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/Conflict" data-name="athena::routing::exceptions::conflict">
+      <a href="../../../Athena/Routing/Exceptions/Conflict.html">Conflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/Forbidden" data-name="athena::routing::exceptions::forbidden">
+      <a href="../../../Athena/Routing/Exceptions/Forbidden.html">Forbidden</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/Gone" data-name="athena::routing::exceptions::gone">
+      <a href="../../../Athena/Routing/Exceptions/Gone.html">Gone</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/HTTPException" data-name="athena::routing::exceptions::httpexception">
+      <a href="../../../Athena/Routing/Exceptions/HTTPException.html">HTTPException</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/LengthRequired" data-name="athena::routing::exceptions::lengthrequired">
+      <a href="../../../Athena/Routing/Exceptions/LengthRequired.html">LengthRequired</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/MethodNotAllowed" data-name="athena::routing::exceptions::methodnotallowed">
+      <a href="../../../Athena/Routing/Exceptions/MethodNotAllowed.html">MethodNotAllowed</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/NotAcceptable" data-name="athena::routing::exceptions::notacceptable">
+      <a href="../../../Athena/Routing/Exceptions/NotAcceptable.html">NotAcceptable</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/NotFound" data-name="athena::routing::exceptions::notfound">
+      <a href="../../../Athena/Routing/Exceptions/NotFound.html">NotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/NotImplemented" data-name="athena::routing::exceptions::notimplemented">
+      <a href="../../../Athena/Routing/Exceptions/NotImplemented.html">NotImplemented</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/PreconditionFailed" data-name="athena::routing::exceptions::preconditionfailed">
+      <a href="../../../Athena/Routing/Exceptions/PreconditionFailed.html">PreconditionFailed</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/ServiceUnavailable" data-name="athena::routing::exceptions::serviceunavailable">
+      <a href="../../../Athena/Routing/Exceptions/ServiceUnavailable.html">ServiceUnavailable</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/TooManyRequests" data-name="athena::routing::exceptions::toomanyrequests">
+      <a href="../../../Athena/Routing/Exceptions/TooManyRequests.html">TooManyRequests</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/Unauthorized" data-name="athena::routing::exceptions::unauthorized">
+      <a href="../../../Athena/Routing/Exceptions/Unauthorized.html">Unauthorized</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/UnprocessableEntity" data-name="athena::routing::exceptions::unprocessableentity">
+      <a href="../../../Athena/Routing/Exceptions/UnprocessableEntity.html">UnprocessableEntity</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Exceptions/UnsupportedMediaType" data-name="athena::routing::exceptions::unsupportedmediatype">
+      <a href="../../../Athena/Routing/Exceptions/UnsupportedMediaType.html">UnsupportedMediaType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Get" data-name="athena::routing::get">
+      <a href="../../../Athena/Routing/Get.html">Get</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/Routing/Listeners" data-name="athena::routing::listeners">
+      <a href="../../../Athena/Routing/Listeners.html">Listeners</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Listeners/CORS" data-name="athena::routing::listeners::cors">
+      <a href="../../../Athena/Routing/Listeners/CORS.html">CORS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Listeners/Error" data-name="athena::routing::listeners::error">
+      <a href="../../../Athena/Routing/Listeners/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Listeners/Routing" data-name="athena::routing::listeners::routing">
+      <a href="../../../Athena/Routing/Listeners/Routing.html">Routing</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Listeners/View" data-name="athena::routing::listeners::view">
+      <a href="../../../Athena/Routing/Listeners/View.html">View</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/ParamConverter" data-name="athena::routing::paramconverter">
+      <a href="../../../Athena/Routing/ParamConverter.html">ParamConverter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/ParamConverterInterface" data-name="athena::routing::paramconverterinterface(t)">
+      <a href="../../../Athena/Routing/ParamConverterInterface.html">ParamConverterInterface</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters" data-name="athena::routing::parameters">
+      <a href="../../../Athena/Routing/Parameters.html">Parameters</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters/Convertable" data-name="athena::routing::parameters::convertable(t)">
+      <a href="../../../Athena/Routing/Parameters/Convertable.html">Convertable</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters/Param" data-name="athena::routing::parameters::param">
+      <a href="../../../Athena/Routing/Parameters/Param.html">Param</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters/Parameter" data-name="athena::routing::parameters::parameter(t)">
+      <a href="../../../Athena/Routing/Parameters/Parameter.html">Parameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters/Path" data-name="athena::routing::parameters::path(t)">
+      <a href="../../../Athena/Routing/Parameters/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters/Query" data-name="athena::routing::parameters::query(t)">
+      <a href="../../../Athena/Routing/Parameters/Query.html">Query</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Parameters/Request" data-name="athena::routing::parameters::request(t)">
+      <a href="../../../Athena/Routing/Parameters/Request.html">Request</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Patch" data-name="athena::routing::patch">
+      <a href="../../../Athena/Routing/Patch.html">Patch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Post" data-name="athena::routing::post">
+      <a href="../../../Athena/Routing/Post.html">Post</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Prefix" data-name="athena::routing::prefix">
+      <a href="../../../Athena/Routing/Prefix.html">Prefix</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Put" data-name="athena::routing::put">
+      <a href="../../../Athena/Routing/Put.html">Put</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/QueryParam" data-name="athena::routing::queryparam">
+      <a href="../../../Athena/Routing/QueryParam.html">QueryParam</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/RedirectResponse" data-name="athena::routing::redirectresponse">
+      <a href="../../../Athena/Routing/RedirectResponse.html">RedirectResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/RequestStore" data-name="athena::routing::requeststore">
+      <a href="../../../Athena/Routing/RequestStore.html">RequestStore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Response" data-name="athena::routing::response">
+      <a href="../../../Athena/Routing/Response.html">Response</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/Route" data-name="athena::routing::route(controller, actiontype, returntype, *argtypes)">
+      <a href="../../../Athena/Routing/Route.html">Route</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/RouteHandler" data-name="athena::routing::routehandler">
+      <a href="../../../Athena/Routing/RouteHandler.html">RouteHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/RouteResolver" data-name="athena::routing::routeresolver">
+      <a href="../../../Athena/Routing/RouteResolver.html">RouteResolver</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/View" data-name="athena::routing::view(t)">
+      <a href="../../../Athena/Routing/View.html">View</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/athena-framework/athena/Athena/Routing/ViewBase" data-name="athena::routing::viewbase">
+      <a href="../../../Athena/Routing/ViewBase.html">ViewBase</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Athena::Routing::Exceptions::TooManyRequests
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../../Athena/Routing/Exceptions/TooManyRequests.html">Athena::Routing::Exceptions::TooManyRequests</a></li><li class="superclass"><a href="../../../Athena/Routing/Exceptions/HTTPException.html">Athena::Routing::Exceptions::HTTPException</a></li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/athena-framework/athena/blob/c19fd9166021ef7cb6fa283f1d7a2190754c5952/src/exceptions/too_many_requests_exception.cr#L3" target="_blank">
+        exceptions/too_many_requests_exception.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(retry_after:Number%7CString%7CNil=nil,message:String?=nil,cause:Exception?=nil,headers:HTTP::Headers=HTTP::Headers.new)-class-method" class="signature"><strong>.new</strong>(retry_after : Number | String | Nil = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, cause : Exception? = <span class="n">nil</span>, headers : HTTP::Headers = <span class="t">HTTP</span><span class="t">::</span><span class="t">Headers</span>.<span class="k">new</span>)</a>
+        
+          <div class="summary"><p>See <code><a href="../../../Athena/Routing/Exceptions/HTTPException.html#new(status:HTTP::Status,message:String,cause:Exception?=nil,headers:HTTP::Headers=HTTP::Headers.new)-class-method">Athena::Routing::Exceptions::HTTPException#new</a></code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../../Athena/Routing/Exceptions/HTTPException.html">Athena::Routing::Exceptions::HTTPException</a></code></h3>
+  
+  
+    <a href="../../../Athena/Routing/Exceptions/HTTPException.html#headers:HTTP::Headers-instance-method" class="tooltip">
+      <span>headers : HTTP::Headers</span>
+    headers</a>, 
+    
+  
+    <a href="../../../Athena/Routing/Exceptions/HTTPException.html#headers=(headers:HTTP::Headers)-instance-method" class="tooltip">
+      <span>headers=(headers : HTTP::Headers)</span>
+    headers=</a>, 
+    
+  
+    <a href="../../../Athena/Routing/Exceptions/HTTPException.html#status:HTTP::Status-instance-method" class="tooltip">
+      <span>status : HTTP::Status</span>
+    status</a>, 
+    
+  
+    <a href="../../../Athena/Routing/Exceptions/HTTPException.html#status_code:Int32-instance-method" class="tooltip">
+      <span>status_code : Int32</span>
+    status_code</a>, 
+    
+  
+    <a href="../../../Athena/Routing/Exceptions/HTTPException.html#to_json(io:IO):Nil-instance-method" class="tooltip">
+      <span>to_json(io : IO) : Nil</span>
+    to_json</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from class <code><a href="../../../Athena/Routing/Exceptions/HTTPException.html">Athena::Routing::Exceptions::HTTPException</a></code></h3>
+  
+  
+    <a href="../../../Athena/Routing/Exceptions/HTTPException.html#new(status:HTTP::Status,message:String,cause:Exception?=nil,headers:HTTP::Headers=HTTP::Headers.new)-class-method" class="tooltip">
+      <span>new(status : HTTP::Status, message : String, cause : Exception? = <span class="n">nil</span>, headers : HTTP::Headers = <span class="t">HTTP</span><span class="t">::</span><span class="t">Headers</span>.<span class="k">new</span>)<br/>new(status_code : Int32, message : String, cause : Exception? = <span class="n">nil</span>, headers : HTTP::Headers = <span class="t">HTTP</span><span class="t">::</span><span class="t">Headers</span>.<span class="k">new</span>)</span>
+    new</a>
+    
+  
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from class <code>Exception</code></h3>
+  
+  
+    <a href="../../../Exception.html#to_json(io:IO)-instance-method" class="tooltip">
+      <span>to_json(io : IO)</span>
+    to_json</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+  <h3>Class methods inherited from class <code>Object</code></h3>
+  
+  
+    <a href="../../../Object.html#from_parameter(value:String?):String?-class-method" class="tooltip">
+      <span>from_parameter(value : String?) : String?</span>
+    from_parameter</a>
+    
+  
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(retry_after:Number|String|Nil=nil,message:String?=nil,cause:Exception?=nil,headers:HTTP::Headers=HTTP::Headers.new)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(retry_after : Number | String | Nil = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, cause : Exception? = <span class="n">nil</span>, headers : HTTP::Headers = <span class="t">HTTP</span><span class="t">::</span><span class="t">Headers</span>.<span class="k">new</span>)
+
+        <a class="method-permalink" href="#new(retry_after:Number%7CString%7CNil=nil,message:String?=nil,cause:Exception?=nil,headers:HTTP::Headers=HTTP::Headers.new)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>See <code><a href="../../../Athena/Routing/Exceptions/HTTPException.html#new(status:HTTP::Status,message:String,cause:Exception?=nil,headers:HTTP::Headers=HTTP::Headers.new)-class-method">Athena::Routing::Exceptions::HTTPException#new</a></code>.</p>
+
+<p>If <em>retry_after</em> is provided, adds a <code>retry-after</code> header that represents the number of seconds or HTTP-date after which the request may be retried.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/athena-framework/athena/blob/c19fd9166021ef7cb6fa283f1d7a2190754c5952/src/exceptions/too_many_requests_exception.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
